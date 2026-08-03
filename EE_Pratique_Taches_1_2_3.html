@@ -167,8 +167,9 @@ body.present .slide-scale-wrap{height:100vh;overflow:hidden;justify-content:flex
 #printArea{display:none;}
 @media print{
   @page{margin:15mm;}
+  html,body{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;display:block!important;background:#fff!important;}
   body>*{display:none!important;}
-  #printArea{display:block!important;}
+  #printArea{display:block!important;height:auto!important;max-height:none!important;overflow:visible!important;position:static!important;transform:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   .pa-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid #5DB88A;padding-bottom:10px;margin-bottom:18px;}
   .pa-logo{height:34px;}
   .pa-title{font-size:18px;font-weight:800;color:#1C2333;}
